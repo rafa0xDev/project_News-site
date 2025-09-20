@@ -203,7 +203,7 @@ strong {
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.8rem;
     }
 
@@ -228,7 +228,7 @@ strong {
 
     /* Navigation CENTERED on mobile */
     .navigation {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 0.5rem;
         padding: 0;
@@ -259,7 +259,7 @@ strong {
 
     /* Footer */
     .footer-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
     }
 
