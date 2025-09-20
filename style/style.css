@@ -90,10 +90,18 @@ main {
 
 .navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* activity di kiri, button di kanan */
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.type-articel {
+    flex: 1; /* biar ambil porsi seimbang */
+}
+
+.nav-button {
+    display: flex;
+    gap: 0.5rem; /* kasih jarak antar tombol */
 }
 
 .type-articel p {
