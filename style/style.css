@@ -89,6 +89,7 @@ main {
 }
 
 /* --- Fix for .navigation --- */
+/* --- Fix: Navigation Centered on Mobile --- */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -96,10 +97,12 @@ main {
     margin: 0.8rem 0;
     padding: 0 1rem;
     font-size: 0.9rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .type-articel p {
-    background-color: #5790AB; /* Grayish blue */
+    background-color: #5790AB;
     color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
@@ -212,17 +215,6 @@ strong {
         margin-bottom: 0.8rem;
     }
 
-    .navigation {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        padding: 0;
-    }
-
-    .nav-button {
-        justify-content: flex-start;
-    }
-
     /* Navbar */
     .nav-links {
         flex-direction: row;   /* tetap horizontal */
@@ -263,8 +255,10 @@ strong {
 
     .navigation {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Pusatkan secara horizontal */
         gap: 0.5rem;
+        text-align: center;
+        padding: 0;
     }
 
     .type-articel p {
@@ -273,7 +267,7 @@ strong {
     }
 
     .nav-button {
-        align-self: flex-end;
+        justify-content: center;
     }
 
     .nav-button button {
