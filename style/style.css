@@ -204,7 +204,7 @@ strong {
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.8rem;
     }
 
@@ -263,7 +263,7 @@ strong {
 
     /* Footer */
     .footer-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
     }
 
