@@ -166,13 +166,17 @@ main {
 
 .footer-links {
     margin: 0.8rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Memberi jarak otomatis antar link */
 }
 
 .footer-links a {
     color: #9CCDDB;
-    margin: 0 0.6rem;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    white-space: nowrap; /* Mencegah teks link patah jadi 2 baris */
 }
 
 .footer-links a:hover {
@@ -183,28 +187,20 @@ main {
 strong {
     color: #9CCDDB;
 }
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 1.2rem 0;
+        font-size: 0.85rem;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+    .footer-links {
+        gap: 0.6rem;
     }
 
-    .category {
-        font-size: 1.3rem;
-    }
-
-    .Headline-tag {
-        font-size: 1.8rem;
-    }
-
-    .navigation {
-        flex-direction: column;
-        gap: 0.5rem;
+    .footer-links a {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.4rem;
     }
 }
