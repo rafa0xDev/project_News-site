@@ -90,28 +90,26 @@ main {
 
 .navigation {
     display: flex;
-    justify-content: space-between; /* teks kiri, tombol kanan */
+    flex-direction: row;     /* pastikan horizontal */
+    justify-content: space-between; /* kiri & kanan */
     align-items: center;
     width: 100%;
-    margin-top: 0.5rem; /* jarak sedikit dari iframe */
+    margin: 0.5rem 0;
 }
 
-.type-articel p {
-    margin: 0; /* biar teks activity tidak nambah jarak aneh */
-    font-size: 1rem;
-    font-weight: 600;
-}
-
+/* biar button icon tetap rapat horizontal */
 .nav-button {
     display: flex;
-    gap: 0.5rem; /* jarak antar tombol */
+    flex-direction: row;
+    gap: 0.5rem;
 }
 
 .nav-button button {
     background: none;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
+    padding: 0.3rem;
 }
 
 .type-articel p {
@@ -224,11 +222,7 @@ strong {
     }
 
     .navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
+        padding: 0 1rem;
     }
 
     /* Navbar */
