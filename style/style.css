@@ -205,6 +205,14 @@ strong {
         margin-bottom: 0.8rem;
     }
 
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
     /* Navbar */
     .nav-links {
         flex-direction: row;   /* tetap horizontal */
