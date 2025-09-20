@@ -88,28 +88,14 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Fix for .navigation --- */
 .navigation {
     display: flex;
-    flex-direction: row;     /* pastikan horizontal */
-    justify-content: space-between; /* kiri & kanan */
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 0.5rem 0;
-}
-
-/* biar button icon tetap rapat horizontal */
-.nav-button {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-}
-
-.nav-button button {
-    background: none;
-    border: none;
-    font-size: 1.3rem;
-    cursor: pointer;
-    padding: 0.3rem;
+    margin: 0.8rem 0;
+    padding: 0 1rem;
+    font-size: 0.9rem;
 }
 
 .type-articel p {
@@ -119,6 +105,11 @@ main {
     border-radius: 4px;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+.nav-button {
+    display: flex;
+    gap: 0.5rem;
 }
 
 .nav-button button {
@@ -222,7 +213,14 @@ strong {
     }
 
     .navigation {
-        padding: 0 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .nav-button {
+        justify-content: flex-start;
     }
 
     /* Navbar */
