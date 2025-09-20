@@ -44,6 +44,11 @@ header h1 {
     list-style: none;
 }
 
+.nav-links li {
+    display: inline-flex; /* atau flex juga bisa */
+    align-items: center;
+}
+
 .nav-links a {
     color: #9CCDDB; /* Light blue */
     text-decoration: none;
@@ -202,9 +207,19 @@ strong {
 
     /* Navbar */
     .nav-links {
-        flex-direction: row;
-        gap: 0.8rem;
-        padding: 1rem 0;
+        flex-direction: row;   /* tetap horizontal */
+        flex-wrap: nowrap;     /* biar tidak turun */
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav-links li {
+        display: inline-flex; 
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem;
     }
 
     .nav-links a {
