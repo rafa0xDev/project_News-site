@@ -149,27 +149,40 @@ main {
 }
 
 /* Footer */
-footer {
+.site-footer {
     background-color: #072D44;
-    color: #FFFFFF;
-    text-align: center;
+    color: #D0D7E1;
     padding: 1.5rem 0;
     margin-top: 2rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-    color: #9CCDDB;
-}
-
-footer p:first-child {
     font-size: 0.9rem;
 }
 
-footer p:last-child {
-    font-size: 0.8rem;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
 }
 
+.footer-links {
+    margin: 0.8rem 0;
+}
+
+.footer-links a {
+    color: #9CCDDB;
+    margin: 0 0.6rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+strong {
+    color: #9CCDDB;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
