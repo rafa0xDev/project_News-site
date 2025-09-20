@@ -1,3 +1,11 @@
+/*
+  Dark blue: #072D44
+  Medium dark blue: #064469
+  Grayish blue: #5790AB
+  Light blue: #9CCDDB
+  Light gray/blue: #D0D7E1
+*/
+
 /* Global Styles */
 * {
     margin: 0;
@@ -65,8 +73,9 @@ main {
 .category {
     color: #064469;
     font-size: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .headline-container {
@@ -94,13 +103,13 @@ main {
     max-width: 100%;
 }
 
-.type-articel p {
-    background-color: #5790AB;
-    color: white;
+.type-article p { /* Diperbaiki typo: 'articel' -> 'article' */
+    background-color: #9CCDDB;
+    color: #064469;
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .nav-button {
@@ -227,17 +236,16 @@ strong {
         margin: 0.8rem 0;
     }
 
-    /* Navigation TETAP HORIZONTAL di mobile */
     .navigation {
-        flex-direction: row;           /* Tetap sejajar horizontal */
-        justify-content: space-between; /* activity kiri, tombol kanan */
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
         gap: 0;
         padding: 0.5rem 1rem;
         width: 100%;
     }
 
-    .type-articel p {
+    .type-article p {
         font-size: 0.75rem;
         padding: 0.25rem 0.6rem;
     }
