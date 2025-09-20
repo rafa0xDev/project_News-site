@@ -90,18 +90,28 @@ main {
 
 .navigation {
     display: flex;
-    justify-content: space-between; /* activity di kiri, button di kanan */
+    justify-content: space-between; /* teks kiri, tombol kanan */
     align-items: center;
     width: 100%;
+    margin-top: 0.5rem; /* jarak sedikit dari iframe */
 }
 
-.type-articel {
-    flex: 1; /* biar ambil porsi seimbang */
+.type-articel p {
+    margin: 0; /* biar teks activity tidak nambah jarak aneh */
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .nav-button {
     display: flex;
-    gap: 0.5rem; /* kasih jarak antar tombol */
+    gap: 0.5rem; /* jarak antar tombol */
+}
+
+.nav-button button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .type-articel p {
