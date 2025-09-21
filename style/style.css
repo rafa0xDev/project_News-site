@@ -1,11 +1,3 @@
-/*
-  Dark blue: #072D44
-  Medium dark blue: #064469
-  Grayish blue: #5790AB
-  Light blue: #9CCDDB
-  Light gray/blue: #D0D7E1
-*/
-
 /* Global Styles */
 * {
     margin: 0;
@@ -35,6 +27,9 @@ header {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
@@ -64,48 +59,53 @@ header h1 {
     color: #FFFFFF;
 }
 
-/* mobile hamburger */
+/* Mobile Hamburger Toggle */
 .menu-toggle {
     display: none;
+    font-size: 2rem;
+    color: #9CCDDB;
+    cursor: pointer;
+    margin-top: 0.5rem;
 }
 
+/* Hamburger Menu */
 .hamburger-menu {
-    display: none;
-    justify-content: center;
-    gap: 2rem;
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
     position: fixed;
-    top : 0;
-    right: -100%;
+    top: 70px;
+    right: 0;
+    transform: translateX(100%);
     width: 250px;
-    height: 100vh;
+    padding: 1.5rem;
     background-color: #072D44;
-    transition: right 0.3s ease-in-out;
-    z-index: 100;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+    z-index: 101;
 }
 
-.hamburger-menu ion-icon {
-    font-size: 20px;
-    color: #fff;
-}
-.hamburger-menu li a{
-    position: fixed;
-    top: 0;
-    left: -250px; /* hidden */
-    width: 250px;
-    height: 100%;
-    background: #0a2a43; /* warna sama nav */
-    transition: left 0.3s ease;
-    padding-top: 60px; /* biar turun dikit dari atas */
+.hamburger-menu li a {
+    color: #9CCDDB;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
 }
 
 .hamburger-menu li a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    color: #FFFFFF;
 }
 
+.hamburger-menu.active {
+    transform: translateX(0);
+}
+
+/* Overlay */
 .overlay {
-    position : fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -113,15 +113,12 @@ header h1 {
     background: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 90;
+    transition: opacity 0.3s ease;
 }
 
 .overlay.active {
     display: block;
-}
-
-/* kalau aktif */
-.hamburger-menu.active {
-    right: 0;
+    opacity: 1;
 }
 
 /* Main Content */
@@ -154,22 +151,20 @@ main {
 .navigation {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
     margin: 0.8rem 0;
     padding: 0 1rem;
     font-size: 0.9rem;
-    width: 100%;
-    max-width: 100%;
 }
 
-.type-article p { /* Diperbaiki typo: 'articel' -> 'article' */
+.type-article p {
     background-color: #9CCDDB;
     color: #064469;
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     font-size: 0.8rem;
     font-weight: 800;
+    margin: 0;
 }
 
 .nav-button {
@@ -269,16 +264,7 @@ strong {
     /* Header */
     header h1 {
         font-size: 1.5rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .nav-links {
-        flex-direction: row;
-        gap: 0.8rem;
-    }
-
-    .nav-links a {
-        justify-content: center;
+        margin-bottom: 0.5rem;
     }
 
     /* Sembunyikan nav desktop */
@@ -289,26 +275,6 @@ strong {
     /* Tampilkan hamburger icon */
     .menu-toggle {
         display: block;
-        font-size: 2rem;
-        color: #9CCDDB;
-        cursor: pointer;
-    }
-
-    /* Hamburger menu default hidden */
-    .hamburger-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #072D44;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 1rem;
-        border-radius: 8px;
-    }
-
-    /* Saat aktif */
-    .hamburger-menu.active {
-        display: flex;
     }
 
     /* Main */
@@ -327,22 +293,12 @@ strong {
     }
 
     .navigation {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0;
         padding: 0.5rem 1rem;
-        width: 100%;
     }
 
     .type-article p {
         font-size: 0.75rem;
         padding: 0.25rem 0.6rem;
-    }
-
-    .nav-button {
-        display: flex;
-        gap: 0.5rem;
     }
 
     .nav-button button {
@@ -361,11 +317,7 @@ strong {
 
     /* Footer */
     .footer-links {
-        flex-direction: row;
+        flex-direction: column;
         gap: 0.5rem;
-    }
-
-    .footer-links a {
-        margin: 0.3rem 0;
     }
 }
