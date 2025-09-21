@@ -16,7 +16,11 @@
 <body>
     <!-- HEADER -->
     <header class="container">
-        <h1>yangpentingberita.com</h1>
+        <div class="header-top">
+            <h1>yangpentingberita.com</h1>
+            <ion-icon name="menu-outline" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu"></ion-icon>
+        </div>
+
         <!-- Desktop Nav -->
         <nav>
             <ul class="nav-links">
@@ -26,15 +30,13 @@
             </ul>
         </nav>
 
-        <!-- Mobile Nav -->
-        <nav class="mobile-nav-container">
-                <ion-icon name="menu-outline" id="menu-toggle" class="menu-toggle"></ion-icon>
-                <ul class="hamburger-menu" id="hamburger-menu">
-                    <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
-                    <li><a href="https://www.kompas.com/" target="_blank"><ion-icon name="newspaper-outline"></ion-icon> News</a></li>
-                    <li><a href="https://www.instagram.com/rayfenalva?igsh=a2hjY2JtaTdyMjli"><ion-icon name="chatbubbles-outline"></ion-icon> Contact</a></li>
-                </ul>
-        </nav>
+        <!-- Mobile Nav Menu -->
+        <ul class="hamburger-menu" id="hamburger-menu">
+            <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+            <li><a href="https://www.kompas.com/" target="_blank"><ion-icon name="newspaper-outline"></ion-icon> News</a></li>
+            <li><a href="https://www.instagram.com/rayfenalva?igsh=a2hjY2JtaTdyMjli"><ion-icon name="chatbubbles-outline"></ion-icon> Contact</a></li>
+        </ul>
+
         <div class="overlay" id="overlay"></div>
     </header>
     <main class="container">

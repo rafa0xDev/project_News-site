@@ -38,6 +38,19 @@ header h1 {
     text-align: center;
 }
 
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.header-top h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
 .nav-links {
     display: flex;
     justify-content: center;
@@ -62,10 +75,11 @@ header h1 {
 /* Mobile Hamburger Toggle */
 .menu-toggle {
     display: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #9CCDDB;
     cursor: pointer;
-    margin-top: 0.5rem;
+    background: none;
+    border: none;
 }
 
 /* Hamburger Menu */
@@ -317,7 +331,7 @@ strong {
 
     /* Footer */
     .footer-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
     }
 }
