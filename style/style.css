@@ -19,6 +19,7 @@ body {
 }
 
 /* Header */
+/* HEADER DESKTOP LAYOUT */
 header {
     background-color: #072D44;
     color: #FFFFFF;
@@ -29,27 +30,37 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Top: Judul + Hamburger */
 .header-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* logo di tengah atas */
     align-items: center;
-    padding: 1rem 20px;
+    padding: 1rem 0;
     width: 100%;
 }
 
-header h1 {
-    font-size: 1.8rem;
+.header-top h1 {
     margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
-/* Desktop Nav — tetap rata tengah horizontal */
+/* Hamburger disembunyikan di desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Navbar horizontal DI BAWAH LOGO */
+nav {
+    display: block;
+    width: 100%;
+}
+
 .nav-links {
     display: flex;
     justify-content: center;
     gap: 2rem;
     list-style: none;
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     margin: 0;
 }
 
@@ -61,13 +72,13 @@ header h1 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
     color: #FFFFFF;
 }
 
-/* Mobile Hamburger Toggle — default disembunyikan di desktop */
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -78,7 +89,6 @@ header h1 {
     transition: transform 0.3s ease;
 }
 
-/* Hamburger Menu (slide from right) */
 .hamburger-menu {
     display: flex;
     flex-direction: column;
@@ -113,8 +123,7 @@ header h1 {
     transform: translateX(0);
 }
 
-/* Overlay */
-.overlay {
+ .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -130,6 +139,7 @@ header h1 {
     display: block;
     opacity: 1;
 }
+
 /* Main Content */
 main {
     margin-top: 2rem;
@@ -156,7 +166,6 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation (tag + buttons) */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -278,17 +287,14 @@ strong {
         font-size: 1.5rem;
     }
 
-    /* Sembunyikan nav desktop */
     .nav-links {
         display: none;
     }
 
-    /* Tampilkan hamburger di pojok kanan atas */
     .menu-toggle {
         display: block;
     }
 
-    /* Main Content Adjustments */
     .category {
         font-size: 1.3rem;
         margin-bottom: 1rem;
