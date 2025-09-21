@@ -84,6 +84,26 @@ header h1 {
     z-index: 100;
 }
 
+.hamburger-menu ion-icon {
+    font-size: 20px;
+    color: #fff;
+}
+.hamburger-menu li a{
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden */
+    width: 250px;
+    height: 100%;
+    background: #0a2a43; /* warna sama nav */
+    transition: left 0.3s ease;
+    padding-top: 60px; /* biar turun dikit dari atas */
+}
+
+.hamburger-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
 .overlay {
     position : fixed;
     top: 0;
