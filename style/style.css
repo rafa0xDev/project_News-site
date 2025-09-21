@@ -64,6 +64,30 @@ header h1 {
     color: #FFFFFF;
 }
 
+/* mobile hamburger */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+/* kalau aktif */
+.hamburger-menu.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #072D44;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
 /* Main Content */
 main {
     margin-top: 2rem;
@@ -219,6 +243,36 @@ strong {
 
     .nav-links a {
         justify-content: center;
+    }
+
+    /* Sembunyikan nav desktop */
+    .nav-links {
+        display: none;
+    }
+
+    /* Tampilkan hamburger icon */
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        color: #9CCDDB;
+        cursor: pointer;
+    }
+
+    /* Hamburger menu default hidden */
+    .hamburger-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #072D44;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    /* Saat aktif */
+    .hamburger-menu.active {
+        display: flex;
     }
 
     /* Main */
