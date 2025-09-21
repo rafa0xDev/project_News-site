@@ -74,18 +74,34 @@ header h1 {
     justify-content: center;
     gap: 2rem;
     list-style: none;
+    position: fixed;
+    top : 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #072D44;
+    transition: right 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.overlay {
+    position : fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 90;
+}
+
+.overlay.active {
+    display: block;
 }
 
 /* kalau aktif */
 .hamburger-menu.active {
-    display: flex;
-    flex-direction: column;
-    background-color: #072D44;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 8px;
+    right: 0;
 }
 
 /* Main Content */
