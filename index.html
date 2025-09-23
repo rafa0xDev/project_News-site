@@ -95,17 +95,19 @@
                 Informasi mengenai menu dan harganya dapat direpresentasikan secara sistematis menggunakan <strong>matriks</strong>, seperti yang ditampilkan pada gambar berikut:
             </p>
 
-            <picture>
+           <picture>
                 <source 
                     media="(max-width: 600px)" 
-                    srcset="images/Matrix-kokuripeler-small.jpg" 
+                    srcset="images/Matrix-kokuripeler.jpg" 
                     type="image/jpeg">
                 <img 
                     src="images/Matrix-kokuripeler.jpg" 
+                    srcset="images/Matrix-kokuripeler.jpg 1x, images/Matrix-kokuripeler.jpg 2x"
                     sizes="(max-width: 600px) 100vw, 800px"
                     alt="Tabel Matriks Menu Warung: Representasi data harga dan kategori makanan dalam bentuk matriks"
                     class="matrix-image"
-                    loading="lazy">
+                    loading="lazy"
+                    onerror="this.src='images/Matrix-kokuripeler.jpg'; this.onerror=null;">
             </picture>
 
             <p>
