@@ -1,18 +1,21 @@
-const menuLst = document.getElementById('hamburger-menu');
-const menuToggle = document.getElementById('menu-toggle');
-const overlay = document.querySelector('.overlay');
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const overlay = document.getElementById('overlay');
 
-// Toggle menu and overlay
-menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    menuLst.classList.toggle('active');
-    overlay.classList.toggle('active');
-});
+    if (menuToggle && hamburgerMenu && overlay) {
+        menuToggle.addEventListener('click', function () {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+            hamburgerMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
 
-// Close menu when clicking overlay
-overlay.addEventListener('click', () => {
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuLst.classList.remove('active');
-    overlay.classList.remove('active');
+        // Tutup menu saat overlay diklik
+        overlay.addEventListener('click', function () {
+            hamburgerMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    }
 });
